@@ -2,7 +2,7 @@
 
 $status=Get-Service | where-object {$_.DisplayName -match 'mcafee firewall'}
 
-$date=Get-Date -Format "MM/dd/yyyy HH:mm"
+$date=Get-Date -Format "MM/dd/yyyy HH:mm:ss"
 Write-Host "Ans: $($status.DisplayName)"
 $json=@"
 [{
