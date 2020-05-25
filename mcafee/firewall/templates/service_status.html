@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>McAfee</title>
+</head>
+<body>
+
+
+<div style="height: 90;size: 80;background-color:coral">
+    <p style="color: black;font-size: 40;text-align: center;padding-top: 30;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">McAfee Firewall Status </p>
+</div >
+<br>
+<div>
+<form action="http://127.0.0.1:8000/status_check/" method="GET">
+{% csrf_token %}
+<input type="submit" name="btn" value="View All Records   ">
+</form>
+
+<form>
+{% csrf_token %}
+<input type="submit" name="btn" value="Delete All Records" onclick="delete_record()">
+</form>
+    
+
+</div>
+<table border="1" width="800">
+<tr>
+<td>Date</td>
+<td>Service Name</td>
+<td>Display Name</td>
+<td>Status</td>
+</tr>
+
+{% for status in allstatus %}
+<tr>
+<td>{{ status.Date }}</td>
+<td>{{ status.Service_Name }}</td>
+<td>{{ status.Display_Name }}</td>
+<td>{{ status.Status}}</td>
+
+</tr>
+{% endfor %}
+</table>
+
+
+</body>
+</html>
+
+<script>
+    function delete_record()
+    {
+        var request = new XMLHttpRequest()
+
+        request.open('DELETE', 'http://127.0.0.1:8000/api/firewall', true)
+        request.onload = function() {
+        // Begin accessing JSON data here
+        var data = JSON.parse(this.response)
+
+        if (request.status >= 200 && request.status < 400) {
+           console.log(data)
+           alert("Message"+data)
+        } else {
+            console.log('error')
+        }
+        }
+
+        request.send()            
+    }
+
+    
+</script>
