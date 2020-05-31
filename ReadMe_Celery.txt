@@ -27,4 +27,7 @@ Architecture
    - cd mcafee
    - celery -A mcafee worker --pool=solo  --loglevel=info
 
+Problem and resolution
+-----------------------
 If delete, is not working -> Clear the cookies and cache from browser
+If celerybeat.pid process found error message -> rm celerybeat.pid file from repo
