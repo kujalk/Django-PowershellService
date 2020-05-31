@@ -26,3 +26,5 @@ Architecture
    - pipenv shell
    - cd mcafee
    - celery -A mcafee worker --pool=solo  --loglevel=info
+
+If delete, is not working -> Clear the cookies and cache from browser

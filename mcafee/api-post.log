@@ -1,0 +1,24 @@
+Ans: McAfee Firewall Core Service
+
+
+StatusCode        : 201
+StatusDescription : Created
+Content           : [{"Date": "06/01/2020 00:40:19", "Service_Name": "mfefire", "Display_Name": "McAfee Firewall Core Service", "Status": "Stopped"}]
+RawContent        : HTTP/1.1 201 Created
+                    Vary: Accept, Cookie
+                    Allow: GET, OPTIONS, POST, DELETE
+                    X-Frame-Options: DENY
+                    X-Content-Type-Options: nosniff
+                    Content-Length: 129
+                    Content-Type: application/json
+                    Date: Sun, 3...
+Forms             : {}
+Headers           : {[Vary, Accept, Cookie], [Allow, GET, OPTIONS, POST, DELETE], [X-Frame-Options, DENY], [X-Content-Type-Options, nosniff]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 129
+
+
+
