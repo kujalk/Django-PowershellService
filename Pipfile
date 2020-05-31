@@ -9,6 +9,9 @@ verify_ssl = true
 django = "*"
 djangorestapiframework = "*"
 djangorestframework = "*"
+redis = "==3.2"
+celery = "*"
+eventlet = "*"
 
 [requires]
 python_version = "3.8"
