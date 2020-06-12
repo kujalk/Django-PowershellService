@@ -1,0 +1,7 @@
+mcafee/.gitignore
+mcafee/.ebextensions/
+mcafee/requirements.txt
+*__init__.py
+*db.sql*
+*migrations
+*Pipfile.lock
