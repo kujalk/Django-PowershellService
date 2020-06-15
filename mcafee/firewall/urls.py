@@ -1,6 +1,7 @@
-from django.conf.urls import url 
 from firewall import views 
+from django.urls import path
  
 urlpatterns = [ 
-    url(r'^api/firewall$', views.service.as_view()),
+    path('api/firewall/', views.service.as_view()),
+    path('api/<slug:servicename>/<slug:status>/',views.servicelist.as_view())
 ]
