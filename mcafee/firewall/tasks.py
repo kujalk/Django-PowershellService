@@ -9,6 +9,6 @@ from celery import task
 def myTask():
     fileName = "D:\\Django_Dev\\api-powershell\\mcafee\\api-post.log"
     with open(fileName, "w+") as f:
-        execute=subprocess.Popen(["powershell.exe","D:\\Django_Dev\\api-powershell\\mcafee\\Get-Service.ps1"],stdout=f)
+        execute=subprocess.Popen(["powershell.exe","D:\\Django_Dev\\api-powershell\\mcafee\\Get-Service.ps1"],
+        stdout=f)
         execute.communicate()
-    print('Hello Works')

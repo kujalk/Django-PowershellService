@@ -140,6 +140,6 @@ CELERY_BEAT_SCHEDULE = {
 
         'task-first': {
         'task': 'firewall.tasks.myTask',
-        'schedule': timedelta(seconds=30)
+        'schedule': timedelta(seconds=60)
        }
 }

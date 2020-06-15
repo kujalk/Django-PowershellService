@@ -8,4 +8,4 @@ class firewallstatus(models.Model):
     Status=models.CharField(max_length=20)
 
     def __str__(self):
-        return self.Date
+        return (str(self.pk)+"_"+self.Date)
