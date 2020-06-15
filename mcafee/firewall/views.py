@@ -61,7 +61,7 @@ def firewall_service(request, pk):
     
 @api_view(['GET'])
 def firewall_detail(request):
-    service = firewallstatus.objects.filter(published=True)
+    service = firewallstatus.objects.filter(Status="Running")
         
     if request.method == 'GET': 
         firewall_serializer = firewallserializer(service, many=True)
