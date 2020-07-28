@@ -16,10 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include 
-from firewall.views import status_check
+from firewall.views import status_check,settings_ex
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='PowerShell Services API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('status_check/',status_check),
+    path('settings_ex/',settings_ex),
     url(r'^', include('firewall.urls')),
+    url(r'^$', schema_view),
 ]

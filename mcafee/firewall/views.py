@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.conf import settings
 
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser
@@ -96,3 +97,7 @@ def status_check(request):
     context = {"allstatus": fwdata}
 
     return render(request, "service_status.html", context)
+
+def settings_ex(request):
+    context = {'db': settings.DATABASES}
+    return render(request, "db.html", context)
